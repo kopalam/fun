@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "11dc19ae1bd8fd0737fec254fc20f7de",
+    "content-hash": "3bd9843ff516da5513c6549fdef12c39",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -215,6 +215,58 @@
             "time": "2018-02-23T01:58:20+00:00"
         },
         {
+            "name": "robregonm/yii2-auth",
+            "version": "0.6.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robregonm/yii2-auth.git",
+                "reference": "f23788cd981552c51c47895f9e76052c946f8099"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robregonm/yii2-auth/zipball/f23788cd981552c51c47895f9e76052c946f8099",
+                "reference": "f23788cd981552c51c47895f9e76052c946f8099",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0",
+                "yiisoft/yii2": "*",
+                "yiisoft/yii2-bootstrap": "*",
+                "yiisoft/yii2-composer": "*",
+                "yiisoft/yii2-swiftmailer": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "auth\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "robregonm",
+                    "email": "robregonm@gmail.com",
+                    "homepage": "http://obregon.co",
+                    "role": "Author"
+                }
+            ],
+            "description": "Yii 2 User Authentication & Role Based Access Control (RBAC) Module",
+            "keywords": [
+                "Authentication",
+                "access",
+                "auth",
+                "rbac",
+                "user",
+                "yii",
+                "yii2"
+            ],
+            "abandoned": true,
+            "time": "2015-06-02T20:44:19+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.12",
             "source": {
@@ -368,6 +420,7 @@
             ],
             "time": "2018-03-21T18:36:53+00:00"
         },
+
         {
             "name": "yiisoft/yii2-bootstrap",
             "version": "2.0.8",
@@ -481,6 +534,53 @@
                 "yii2"
             ],
             "time": "2018-07-05T15:44:47+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-httpclient",
+            "version": "2.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-httpclient.git",
+                "reference": "360b0f9c0855709b3370d486a4de435022fb3926"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-httpclient/zipball/360b0f9c0855709b3370d486a4de435022fb3926",
+                "reference": "360b0f9c0855709b3370d486a4de435022fb3926",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0.13"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\httpclient\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Paul Klimov",
+                    "email": "klimov.paul@gmail.com"
+                }
+            ],
+            "description": "HTTP client extension for the Yii framework",
+            "keywords": [
+                "curl",
+                "http",
+                "httpclient",
+                "yii2"
+            ],
+            "time": "2018-09-23T21:53:35+00:00"
         },
         {
             "name": "yiisoft/yii2-swiftmailer",
