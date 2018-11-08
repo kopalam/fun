@@ -25,25 +25,25 @@ class AuthGroup extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public function rules()
-    {
-        return [
-            [['status'], 'integer'],
-            [['title'], 'string', 'max' => 100],
-            [['rules'], 'string', 'max' => 80],
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function attributeLabels()
-    {
-        return [
-            'id' => 'ID',
-            'title' => 'Title',
-            'status' => 'Status',
-            'rules' => 'Rules',
-        ];
-    }
+//    public function rules()
+//    {
+//        return [
+//            [['status'], 'integer'],
+//            [['title'], 'string', 'max' => 100],
+//            [['rules'], 'string', 'max' => 80],
+//        ];
+//    }
+//
+//    /**
+//     * {@inheritdoc}
+//     */
+//    public function attributeLabels()
+//    {
+//        return [
+//            'id' => 'ID',
+//            'title' => 'Title',
+//            'status' => 'Status',
+//            'rules' => 'Rules',
+//        ];
+//    }
 }

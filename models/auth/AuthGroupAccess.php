@@ -20,26 +20,26 @@ class AuthGroupAccess extends \yii\db\ActiveRecord
         return 'auth_group_access';
     }
 
-    /**
-     * {@inheritdoc}
-     */
-    public function rules()
-    {
-        return [
-            [['uid', 'group_id'], 'required'],
-            [['uid', 'group_id'], 'integer'],
-            [['uid', 'group_id'], 'unique', 'targetAttribute' => ['uid', 'group_id']],
-        ];
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function attributeLabels()
-    {
-        return [
-            'uid' => 'Uid',
-            'group_id' => 'Group ID',
-        ];
-    }
+//    /**
+//     * {@inheritdoc}
+//     */
+//    public function rules()
+//    {
+//        return [
+//            [['uid', 'group_id'], 'required'],
+//            [['uid', 'group_id'], 'integer'],
+//            [['uid', 'group_id'], 'unique', 'targetAttribute' => ['uid', 'group_id']],
+//        ];
+//    }
+//
+//    /**
+//     * {@inheritdoc}
+//     */
+//    public function attributeLabels()
+//    {
+//        return [
+//            'uid' => 'Uid',
+//            'group_id' => 'Group ID',
+//        ];
+//    }
 }
