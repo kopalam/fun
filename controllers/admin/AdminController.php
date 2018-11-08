@@ -29,8 +29,7 @@ class AdminController   extends BaseController
 
         $menu       =   new MenuService();
         $result     =   $menu->getMenu($userId,$groupId);
-        print_r($result);
-//        Utils::apiDisplay(['status'=>1,'data'=>$result]);
+        Utils::apiDisplay(['status'=>1,'data'=>$result]);
 
     }
 }

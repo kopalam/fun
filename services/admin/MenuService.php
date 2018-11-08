@@ -24,7 +24,8 @@ class MenuService
         $rule   =   explode(',',$rules['rules']);
         $data   =   [];
         foreach ($rule as $key =>$value){
-            $data[]   =   AuthRule::find()->where(['id'=>$value])->asArray()->select(['name','title'])->all();
+            $data[$key]['name']   =   AuthRule::findOne(['id'=>$value])->name;
+            $data[$key]['title']   =   AuthRule::findOne(['id'=>$value])->title;
         }
         return $data;
     }
