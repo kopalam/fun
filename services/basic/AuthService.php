@@ -3,6 +3,7 @@
     namespace app\services\basic;
     use Yii;
     use app\models\auth\AuthRule;
+    use app\models\auth\AuthGroup;
 
     Class AuthService {
     
@@ -92,9 +93,7 @@
         if (isset($groups[$uid])) {
             return $groups[$uid];
         }
-
         $groups  =   $this->getUserGroups($uid);
-        // print_r($groups);exit;
         return $groups;
     }
 
@@ -109,8 +108,8 @@
                     ->from(['m' => 'auth_group'])
                     ->leftJoin(['g' => 'auth_group_access'], 'm.id = g.group_id')
                     ->where(['g.uid'=>$uid])
-                    ->andWhere('m.status = 0')
-                    ->all();
+                    ->andWhere('m.status = 1')
+                    ->one();
                     
 
         return $user_groups;
@@ -189,5 +188,34 @@
         }
 
         return $user_info[$uid];
+    }
+
+    /*
+     * 通过group获取对应rule规则
+     * */
+    public  function  AuthGroupInfo(){
+        $group  =   AuthGroup::find()->asArray()->all();
+
+        foreach($group as $key =>$value){
+            $rule[]  =   explode(',',$value['rules']);
+            $res[$key]['groupId'] =   $value['id'];
+            $res[$key]['name']    =   $value['name'];
+        }
+        foreach($rule as $k=>$val){
+            $ruleCount    =   count($val);
+            for ($i=0;$i<$ruleCount;$i++){
+//              $ruleData[$k]['ruleId']    =    AuthRule::find($val[$i])->asArray()->select(['id','title','name','status'])->all();
+                $ruleData[$k][]    =    AuthRule::findOne($val[$i])->attributes;
+            }
+        }
+        return $ruleData;
+    }
+
+    /*
+     * 获取rule规则表全部信息
+     * */
+    public function getAuthInfo(){
+        $rule   =   AuthRule::find()->asArray()->all();
+        return $rule;
     }
 }

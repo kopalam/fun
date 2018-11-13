@@ -23,6 +23,17 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'redis' =>[
+
+            'class' => 'yii\redis\Connection',
+
+            'hostname' => '127.0.0.1',  //你的redis地址
+
+            'port' => 6379, //端口
+
+            'database' => 0,
+
+        ],
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,

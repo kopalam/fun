@@ -11,6 +11,10 @@ use Yii;
  * @property string $username
  * @property string $password
  * @property int $age
+ * @property string $telephone
+ * @property string $email 邮箱
+ * @property string $avatar 头像
+ * @property int $status
  */
 class AuthUser extends \yii\db\ActiveRecord
 {
@@ -25,16 +29,18 @@ class AuthUser extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public function rules()
-    {
-        return [
-            [['id'], 'required'],
-            [['id', 'age'], 'integer'],
-            [['username'], 'string', 'max' => 30],
-            [['password'], 'string', 'max' => 32],
-            [['id'], 'unique'],
-        ];
-    }
+//    public function rules()
+//    {
+//        return [
+//            [['id', 'password', 'avatar'], 'required'],
+//            [['id', 'status'], 'integer'],
+//            [['username'], 'string', 'max' => 30],
+//            [['password'], 'string', 'max' => 120],
+//            [['telephone'], 'string', 'max' => 20],
+//            [['avatar'], 'string', 'max' => 130],
+//            [['id'], 'unique'],
+//        ];
+//    }
 
     /**
      * {@inheritdoc}
@@ -45,7 +51,9 @@ class AuthUser extends \yii\db\ActiveRecord
             'id' => 'ID',
             'username' => 'Username',
             'password' => 'Password',
-            'age' => 'Age',
+            'telephone' => 'Telephone',
+            'avatar' => 'Avatar',
+            'status' => 'Status',
         ];
     }
 }

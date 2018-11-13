@@ -27,16 +27,16 @@ class AuthRule extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
-    public function rules()
-    {
-        return [
-            [['type', 'status'], 'integer'],
-            [['name'], 'string', 'max' => 80],
-            [['title'], 'string', 'max' => 20],
-            [['condition'], 'string', 'max' => 100],
-            [['name'], 'unique'],
-        ];
-    }
+//    public function rules()
+//    {
+//        return [
+//            [['type', 'status'], 'integer'],
+//            [['name'], 'string', 'max' => 80],
+//            [['title'], 'string', 'max' => 20],
+//            [['condition'], 'string', 'max' => 100],
+//            [['name'], 'unique'],
+//        ];
+//    }
 
     /**
      * {@inheritdoc}
