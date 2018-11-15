@@ -23,6 +23,12 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'wechat' => [
+            'class' => 'jianyan\easywechat\Wechat',
+            'userOptions' => [],  // 用户身份类参数
+            'sessionParam' => 'wechatUser', // 微信用户信息将存储在会话在这个密钥
+            'returnUrlParam' => '_wechatReturnUrl', // returnUrl 存储在会话中
+        ],
         'redis' =>[
 
             'class' => 'yii\redis\Connection',

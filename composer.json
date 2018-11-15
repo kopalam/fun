@@ -20,7 +20,9 @@
         "yiisoft/yii2-swiftmailer": "~2.0.0",
         "robregonm/yii2-auth": "*",
         "yiisoft/yii2-authclient": "^2.1",
-        "yiisoft/yii2-redis": "^2.0"
+        "yiisoft/yii2-redis": "^2.0",
+        "overtrue/wechat": "~4.0",
+        "jianyan74/yii2-easy-wechat": "^1.0"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",

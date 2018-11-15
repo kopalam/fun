@@ -27,9 +27,19 @@ class AdminController   extends BaseController
         $authory    =   new Authory($token);
         $authory->checkToken($userId);
 
-        $menu       =   new MenuService();
-        $result     =   $menu->getMenu($userId,$groupId);
-        Utils::apiDisplay(['status'=>1,'data'=>$result]);
+        try{
+            $menu       =   new MenuService();
+            $result     =   $menu->getMenu($userId,$groupId);
+            Utils::apiDisplay(['status'=>1,'data'=>$result]);
+        }catch(\Exception $e){
+            $result     =   ['message'=>$e->getMessage(),'code'=>$e->getCode()];
+            Utils::apiDisplay($result);
+        }
+
 
     }
+
+    /*
+     * 添加
+     * */
 }
